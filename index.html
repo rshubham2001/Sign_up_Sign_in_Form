@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration-Form</title>
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="holder">
+            <div class="error-message">
+                <p class="hidden" id="error"></p>
+            </div>
+            <div id="card" class="card log-in">
+                <div class="front">
+                    <div class="btns">
+                        <div class="btn">Sign in</div>
+                        <div id="back" class="btn">Sign Up</div>
+                    </div>
+                    <div id="Uinput" class="input-field" onclick="UinputBorder()">
+                        <i class="fas fa-user"></i>
+                        <input type="text" name="name" id="username" placeholder="Username">
+                    </div>
+                    <div id="Pinput" class="input-field" onclick="PinputBorder()">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" name="password" id="password" placeholder="Password">
+                    </div>
+                    <input id="submit" type="submit" value="Sign in" class="submit">
+                    <div class="forget">
+                        <a href="#" class="reset">Forget Password</a>
+                    </div>
+                    <p class="social-text">Or log in with social platforms</p>
+                    <div class="social-media">
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-google"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                    <div class="footer">
+                        <p>New user<a href="#" id="create">Sign Up</a></p>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="btns">
+                        <div id="front" class="btn">Sign in</div>
+                        <div class="btn">Sign Up</div>
+                    </div>
+                    <form>
+                        <div id="Fname" class="input-field" onclick="FnameBorder()">
+                            <i class="fas fa-user"></i>
+                            <input  type="text" name="Fname" id="firstname" placeholder="First name">
+                        </div>
+                        <div id="lname" class="input-field" onclick="LnameBorder()">
+                            <i class="fas fa-user"></i>
+                            <input  type="text" name="Lname" id="lastname" placeholder="Last name">
+                        </div>
+                        <div class="input-field">
+                            <i class="fa fa-envelope"></i>
+                            <input type="email" name="email" id="email" placeholder="Email id">
+                        </div>
+                        <div id="crpassword" class="input-field" onclick="PasswordBorder()">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" name="password" id="Crpassword" placeholder="Password">
+                        </div>
+                        <div id="cnpassword" class="input-field" onclick="CnPasswordBorder()">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" name="Cpassword" id="Cnpassword" placeholder="Confirm Password">
+                        </div>
+                        <input id="sign-up" type="submit" value="Sign Up" class="submit">
+                    </form>
+                    <div class="footer">
+                        <p>Already have account.<a href="#" id="login">Sign in</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

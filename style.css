@@ -1,0 +1,215 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* background-image: linear-gradient(to right, #ff6e7f, #bfe9ff);*/
+    /* background-image: linear-gradient(to right, #434343 0%, black 100%); */
+    background-size: 400% 400%;
+    background: linear-gradient(-45deg, #f11712, #0099f7,#7b4397,#dc2430);
+    /* animation: gradient 15s ease infinite; */
+}
+/* @keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+} */
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+
+.holder {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    perspective: 1000px;
+}
+
+.card {
+    position: relative;
+    width: 25%;
+    height: 72%;
+    transform-style: preserve-3d;
+    transition: transform 1.5s;
+}
+
+.front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    /* background-image: linear-gradient(to right, #434343 0%, black 100%); */
+    /* background-image: linear-gradient(120deg, #0099f7, #f11712); */
+    text-align: center;
+    border-radius: 30px;
+}
+
+.back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    /* background-image: linear-gradient(to right, #434343 0%, black 100%); */
+    /* background-image: linear-gradient(60deg, #0099f7, #f11712); */
+    color: white;
+    text-align: center;
+    transform: rotateY(180deg);
+    border-radius: 30px;
+}
+
+.flipcard {
+    transform: rotateY(180deg);
+}
+
+.btns {
+    /* border: 1px solid green; */
+    display: flex;
+    height: 13%;
+    align-items: center;
+    margin: 1.5rem 1rem;
+}
+
+.btn {
+    border: 2px solid rgba(255, 255, 255, 0.705);
+    border-radius: 100px;
+    width: 50%;
+    margin: 0 0.5rem;
+    height: 65%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background-image 1.5s ease-in-out;
+}
+
+.input-field {
+    height: 2.5rem;
+    margin: 1.5rem 1rem;
+    border: 2px solid rgba(255, 255, 255, 0.705);
+    border-radius: 100px;
+    display: grid;
+    grid-template-columns: 15% 85%;
+    /* cursor: ; */
+}
+
+.input-field i {
+    text-align: center;
+    color: #ddd3d3;
+    font-size: 1.1rem;
+    line-height: 2.3rem;
+}
+
+.input-field input {
+    background: none;
+    outline: none;
+    border: none;
+    line-height: 1;
+    font-weight: 600;
+    font-size: 0.8rem;
+    color: rgb(228, 224, 224);
+}
+
+.input-field input::placeholder {
+    color: rgb(167, 165, 165);
+}
+
+.submit {
+    height: 2.5rem;
+    width: 7rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: white;
+    background: none;
+    border: 2px solid white;
+    border-radius: 20px;
+    margin-bottom: 1.1rem;
+    cursor: pointer;
+}
+
+.forget {
+    /* border: 1px solid white; */
+    height: 1.5rem;
+    margin-bottom: 1.1rem;
+}
+
+.forget .reset {
+    color: white;
+    font-size: 1rem;
+}
+
+.social-text {
+    color: white;
+    /* border: 1px solid white; */
+    font-size: 1.13rem;
+    margin-bottom: 1.7rem;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+}
+
+.social-icon {
+    height: 46px;
+    width: 46px;
+    border: 2px solid white;
+    margin: 0 0.45rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 1.4rem;
+    border-radius: 50%;
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.footer {
+    color: white;
+    /* border: 2px solid white; */
+    margin-top: 1rem;
+    font-size: 1rem;
+}
+
+.footer a {
+    color: white;
+    margin-left: 2rem;
+    font-size: 1rem;
+}
+
+.btn:hover,
+.submit:hover,
+.social-icon:hover {
+    background-image: linear-gradient(120deg, #0099f7, #f11712);
+}
+
+.error-message {
+    /* border: 1px solid black; */
+    width: 25%;
+    height: 5%;
+    text-align: center;
+    color: red
+}
+
+#error {
+    font-size: 1.2rem;
+}
+
+.hidden {
+    display: none;
+}
